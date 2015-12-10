@@ -93,7 +93,7 @@ class UrlEncoder(object):
     def enbase(self, x, min_length=MIN_LENGTH):
         result = self._enbase(x)
         padding = self.alphabet[0] * (min_length - len(result))
-        return '%s%s' % (padding, result)
+        return '{0!s}{1!s}'.format(padding, result)
 
     def _enbase(self, x):
         n = len(self.alphabet)

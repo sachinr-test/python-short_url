@@ -26,7 +26,7 @@ def generate_test_data(count=10000):
 
     with open(os.path.join(TEST_DATA, 'key_values.txt'), 'w') as f:
         for k, v in result.items():
-            f.write('%s:%s\n' % (k, v))
+            f.write('{0!s}:{1!s}\n'.format(k, v))
 
 # generate_test_data()
 
